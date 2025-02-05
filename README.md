@@ -1,4 +1,4 @@
-# Projeto Dashboard Admin
+# Projeto Dashboard
 
 Uma aplicação de exemplo para demonstrar autenticação, navegação e consumo da API do GitHub utilizando React, React Router e Ant Design.
 
@@ -41,6 +41,7 @@ Uma aplicação de exemplo para demonstrar autenticação, navegação e consumo
   - [Parâmetros](#parâmetros-10)
 - [fetchUserProfile](#fetchuserprofile)
   - [Parâmetros](#parâmetros-11)
+- [Como Instalar e Executar o Projeto](#como-instalar-e-executar-o-projeto)
 
 ---
 
@@ -278,4 +279,29 @@ _Retorna os dados do perfil do usuário._
 
 ---
 
-_Esta documentação foi gerada por [documentation.js](https://documentation.js.org/)._
+## 🚀 Como Instalar e Executar o Projeto
+
+### Pré-requisitos
+
+- **Node.js** (versão 14 ou superior recomendada)
+- **npm** ou **yarn**
+
+### Instalação
+
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+2. Acesse o diretório do projeto:
+   ```bash
+   cd nome-do-repositorio
+3. Instale as dependências:
+   npm install
+
+4. Execução
+Para iniciar a aplicação em modo de desenvolvimento, execute:
+
+Usando npm:
+   ```bash
+   npm run dev
