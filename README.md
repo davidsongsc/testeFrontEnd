@@ -8,39 +8,39 @@ Uma aplicação de exemplo para demonstrar autenticação, navegação e consumo
 
 ---
 
-## 📚 Table of Contents
+## 📚 Sumário
 
 - [PrivateRoute](#privateroute)
-  - [Parameters](#parameters)
+  - [Parâmetros](#parâmetros)
 - [AppContent](#appcontent)
-  - [Parameters](#parameters-1)
+  - [Parâmetros](#parâmetros-1)
 - [App](#app)
 - [Header](#header)
 - [SideMenu](#sidemenu)
-  - [Parameters](#parameters-2)
+  - [Parâmetros](#parâmetros-2)
 - [confirmSearch](#confirmsearch)
 - [AuthProvider](#authprovider)
-  - [Parameters](#parameters-3)
+  - [Parâmetros](#parâmetros-3)
 - [login](#login)
-  - [Parameters](#parameters-4)
+  - [Parâmetros](#parâmetros-4)
 - [logout](#logout)
 - [useAuth](#useauth)
 - [Listagem](#listagem)
-  - [Parameters](#parameters-5)
+  - [Parâmetros](#parâmetros-5)
 - [fetchData](#fetchdata)
-  - [Parameters](#parameters-6)
+  - [Parâmetros](#parâmetros-6)
 - [goToProfile](#gotoprofile)
-  - [Parameters](#parameters-7)
-- [Login Component](#login-component)
+  - [Parâmetros](#parâmetros-7)
+- [Componente de Login](#componente-de-login)
 - [handleLogin](#handlelogin)
 - [Perfil](#perfil)
-  - [Parameters](#parameters-8)
+  - [Parâmetros](#parâmetros-8)
 - [SingleGithub](#singlegithub)
-  - [Parameters](#parameters-9)
+  - [Parâmetros](#parâmetros-9)
 - [fetchUserRepos](#fetchuserrepos)
-  - [Parameters](#parameters-10)
+  - [Parâmetros](#parâmetros-10)
 - [fetchUserProfile](#fetchuserprofile)
-  - [Parameters](#parameters-11)
+  - [Parâmetros](#parâmetros-11)
 
 ---
 
@@ -48,13 +48,13 @@ Uma aplicação de exemplo para demonstrar autenticação, navegação e consumo
 
 Protege uma rota, renderizando seu conteúdo somente se o usuário estiver autenticado. Caso contrário, redireciona para a raiz (`/`).
 
-**Type:** `React.FC<{ children: React.ReactNode }>`  
+**Tipo:** `React.FC<{ children: React.ReactNode }>`  
 
-### Parameters
+### Parâmetros
 
-- **children:** JSX Element que será renderizado se o usuário estiver autenticado.
+- **children:** Elemento JSX que será renderizado se o usuário estiver autenticado.
 
-_Returns a JSX element representing the protected route._
+_Retorna um elemento JSX representando a rota protegida._
 
 ---
 
@@ -62,13 +62,13 @@ _Returns a JSX element representing the protected route._
 
 Componente que renderiza o conteúdo da aplicação, gerenciando rotas públicas e protegidas.
 
-**Type:** `React.FC<{ searchTerm: string }>`  
+**Tipo:** `React.FC<{ searchTerm: string }>`  
 
-### Parameters
+### Parâmetros
 
 - **searchTerm:** Termo de busca para a listagem.
 
-_Returns a JSX element representing the main content area._
+_Retorna um elemento JSX representando a área principal de conteúdo._
 
 ---
 
@@ -77,9 +77,9 @@ _Returns a JSX element representing the main content area._
 Componente principal da aplicação.  
 Configura o Router com o AuthProvider, SideMenu e a área de conteúdo.
 
-**Type:** `React.FC`
+**Tipo:** `React.FC`
 
-_Returns a JSX element representing the entire application._
+_Retorna um elemento JSX representando a aplicação inteira._
 
 ---
 
@@ -88,9 +88,9 @@ _Returns a JSX element representing the entire application._
 Componente de cabeçalho da aplicação.  
 Renderiza um header com fundo branco, texto preto e um ícone de menu na lateral esquerda.
 
-**Type:** `React.FC`
+**Tipo:** `React.FC`
 
-_Returns a JSX element representing the header._
+_Retorna um elemento JSX representando o cabeçalho._
 
 ---
 
@@ -99,15 +99,15 @@ _Returns a JSX element representing the header._
 Componente de menu lateral que oferece navegação e funcionalidades de pesquisa.  
 Exibe diferentes opções de menu com base no estado de autenticação do usuário e ajusta seu layout conforme o estado de colapso.
 
-**Type:** `React.FC<SideMenuProps>`
+**Tipo:** `React.FC<SideMenuProps>`
 
-### Parameters
+### Parâmetros
 
 - **collapsed:** Indica se o menu lateral está colapsado.
 - **onCollapse:** Função chamada quando o menu é colapsado ou expandido.
 - **onSearchChange:** Função chamada para atualizar o termo de busca quando a pesquisa é confirmada.
 
-_Returns a JSX element representing the side menu with navigation options and a search field._
+_Retorna um elemento JSX representando o menu lateral com opções de navegação e um campo de pesquisa._
 
 ---
 
@@ -121,13 +121,13 @@ Confirma a pesquisa e chama a função `onSearchChange` com o valor atual do `lo
 
 Provider do React Context responsável por armazenar o estado de autenticação do usuário e fornecer as funções de login e logout.
 
-**Type:** `React.FC<{ children: React.ReactNode }>`  
+**Tipo:** `React.FC<{ children: React.ReactNode }>`  
 
-### Parameters
+### Parâmetros
 
-- **children:** JSX Element a ser renderizado dentro do contexto de autenticação.
+- **children:** Elemento JSX a ser renderizado dentro do contexto de autenticação.
 
-_Returns the JSX element representing the authentication context._
+_Retorna o elemento JSX representando o contexto de autenticação._
 
 ---
 
@@ -135,12 +135,12 @@ _Returns the JSX element representing the authentication context._
 
 Realiza o login com base nas credenciais fornecidas.
 
-### Parameters
+### Parâmetros
 
 - **username:** `string` – Nome de usuário.
 - **password:** `string` – Senha.
 
-_Returns `boolean`: `true` se o login for bem-sucedido, `false` caso contrário._
+_Retorna `boolean`: `true` se o login for bem-sucedido, `false` caso contrário._
 
 ---
 
@@ -155,9 +155,9 @@ Define o estado de autenticação como falso e remove o usuário do estado e do 
 
 Hook que fornece o contexto de autenticação atual.
 
-_Throws an Error if used outside of an AuthProvider._
+_Lança um erro se utilizado fora de um AuthProvider._
 
-_Returns the authentication context, including login and logout functions._
+_Retorna o contexto de autenticação, incluindo as funções de login e logout._
 
 ---
 
@@ -167,13 +167,13 @@ Componente que exibe os resultados da busca na API do GitHub.
 Utiliza `useEffect` para buscar repositórios e usuários sempre que o `searchTerm` for alterado.  
 Exibe as listas de repositórios e usuários, gerenciando estados de carregamento e erro.
 
-**Type:** `React.FC<ListagemProps>`
+**Tipo:** `React.FC<ListagemProps>`
 
-### Parameters
+### Parâmetros
 
 - **searchTerm:** Termo de busca para filtrar os resultados.
 
-_Returns a JSX element displaying search results (repositories and users)._
+_Retorna um elemento JSX exibindo os resultados da busca (repositórios e usuários)._
 
 ---
 
@@ -181,13 +181,13 @@ _Returns a JSX element displaying search results (repositories and users)._
 
 Realiza uma busca na API do GitHub com base no termo de busca fornecido e atualiza os estados de `repositories` e `users`.
 
-### Parameters
+### Parâmetros
 
 - **query:** `string` – Termo de busca.
 
-_Throws an Error if the API call fails._
+_Lança um erro se a chamada à API falhar._
 
-_Returns the list of repositories and users from the API._
+_Retorna a lista de repositórios e usuários obtida na API._
 
 ---
 
@@ -195,21 +195,21 @@ _Returns the list of repositories and users from the API._
 
 Navega para a página de perfil de um usuário do GitHub.
 
-### Parameters
+### Parâmetros
 
 - **username:** `string` – Nome do usuário para navegação.
 
 ---
 
-## 📝 Login Component
+## 📝 Componente de Login
 
 Componente de login da aplicação.  
 Renderiza um formulário de login com campos para usuário e senha.  
 Chama o hook `login` com as credenciais fornecidas e redireciona para `/listagem` se o login for bem-sucedido; caso contrário, exibe uma mensagem de erro.
 
-**Type:** `React.FC`
+**Tipo:** `React.FC`
 
-_Returns a JSX element representing the login form._
+_Retorna um elemento JSX representando o formulário de login._
 
 ---
 
@@ -226,13 +226,13 @@ Componente de perfil do usuário do GitHub.
 Busca e exibe os dados do perfil, incluindo nome, avatar, bio, seguidores, seguindo, repositórios e localização.  
 Também busca e exibe o README do repositório do usuário com estilo semelhante ao GitHub.
 
-**Type:** `React.FC`
+**Tipo:** `React.FC`
 
-### Parameters
+### Parâmetros
 
 - **username:** Nome de usuário do GitHub para o perfil.
 
-_Returns a JSX element representing the user's profile._
+_Retorna um elemento JSX representando o perfil do usuário._
 
 ---
 
@@ -240,13 +240,13 @@ _Returns a JSX element representing the user's profile._
 
 Componente que exibe o perfil de um usuário do GitHub e lista seus repositórios públicos.
 
-**Type:** `React.FC`
+**Tipo:** `React.FC`
 
-### Parameters
+### Parâmetros
 
 - **username:** Nome de usuário do GitHub.
 
-_Returns a JSX element displaying the user's profile and repositories._
+_Retorna um elemento JSX exibindo o perfil do usuário e seus repositórios._
 
 ---
 
@@ -254,13 +254,13 @@ _Returns a JSX element displaying the user's profile and repositories._
 
 Busca os repositórios de um usuário do GitHub.
 
-### Parameters
+### Parâmetros
 
 - **username:** `string` – Nome do usuário.
 
-_Throws an Error if the API call fails._
+_Lança um erro se a chamada à API falhar._
 
-_Returns a list of the user's repositories._
+_Retorna uma lista dos repositórios do usuário._
 
 ---
 
@@ -268,14 +268,14 @@ _Returns a list of the user's repositories._
 
 Busca o perfil de um usuário do GitHub.
 
-### Parameters
+### Parâmetros
 
 - **username:** `string` – Nome do usuário.
 
-_Throws an Error if the API call fails._
+_Lança um erro se a chamada à API falhar._
 
-_Returns the user's profile data._
+_Retorna os dados do perfil do usuário._
 
 ---
 
-_This documentation was generated by [documentation.js](https://documentation.js.org/)._
+_Esta documentação foi gerada por [documentation.js](https://documentation.js.org/)._
