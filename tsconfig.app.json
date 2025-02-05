@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Define a versão do JavaScript
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Bibliotecas disponíveis
+    "module": "ESNext", // Permite usar módulos ES
+    "jsx": "react-jsx", // Habilita JSX para React
+    "esModuleInterop": true, // Resolve problemas de importação de módulos CommonJS
+    "allowSyntheticDefaultImports": true, // Permite imports padrão sintéticos
+    "strict": true, // Habilita verificações estritas
+    "noUnusedLocals": true, // Detecta variáveis locais não utilizadas
+    "noUnusedParameters": true, // Detecta parâmetros não utilizados
+    "noFallthroughCasesInSwitch": true, // Previne casos de queda em switch statements
+    "noUncheckedSideEffectImports": true, // Detecta efeitos colaterais não verificados
+    "moduleResolution": "node", // Resolve módulos no estilo Node.js
+    "skipLibCheck": true, // Ignora verificações de tipos em bibliotecas externas
+    "types": ["jest"], // Adiciona suporte ao Jest
+    "baseUrl": ".", // Define a raiz do projeto como base para imports
+    "paths": {
+      "@/*": ["src/*"] // Facilita os imports relativos (opcional)
+    }
+  },
+  "include": ["src/**/*", "setupTests.ts"], // Inclui todos os arquivos dentro da pasta `src`
+  "exclude": ["node_modules"] // Exclui a pasta `node_modules`
+}

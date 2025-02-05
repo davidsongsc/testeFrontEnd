@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // Define a versão do JavaScript
+    "lib": ["ES2023", "DOM"], // Bibliotecas disponíveis
+    "module": "ESNext", // Permite usar módulos ES
+    "esModuleInterop": true, // Resolve problemas de importação de módulos CommonJS
+    "allowSyntheticDefaultImports": true, // Permite imports padrão sintéticos
+    "strict": true, // Habilita verificações estritas
+    "moduleResolution": "node", // Resolve módulos no estilo Node.js
+    "skipLibCheck": true, // Ignora verificações de tipos em bibliotecas externas
+    "types": ["node"], // Adiciona suporte ao Node.js
+    "noEmit": true // Desativa a emissão de arquivos JS durante a compilação
+  },
+  "include": ["vite.config.ts", "setupTests.ts"], // Inclui arquivos específicos do Node.js
+  "exclude": ["node_modules", "dist"] // Exclui pastas desnecessárias
+}
